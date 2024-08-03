@@ -182,7 +182,22 @@
 
 
            // //Q19Write a program to eliminate all 0’s from a given number.
-            
+           var a=56340022
+           var con=0;
+           var c=1;
+           for(var i=0;i<a;){
+            var dig=a%10;
+            a=parseInt(a/10);
+            if (dig!=0) {
+                c=c*10;
+                con=con+dig;
+                con=con/10;
+                
+            }
+           }
+           console.log(con*c);
+           
+           
         </script>
     </body>
 </html>
