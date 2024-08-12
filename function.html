@@ -253,6 +253,35 @@
 
 
       // //Q17Write a function which can check a given number is armstrong number or not
+      function arms(a) {
+        var b=a
+        var c=a;
+        var d=0;
+        var sum=0;
+         while(a>0){
+            var rem=a%10
+             d++
+               a=parseInt(a/10);
+         }
+           while(c>0){
+            var rem1=c%10
+            sum=sum+rem1**d
+            c=parseInt(c/10)
+
+           }
+           
+          
+      
+      if (sum==b) {
+        console.log("yes  is a armstrong number");
+      } else {
+        console.log("no  is not a armstrong number");
+      }
+      }
+      arms(1634);
+
+    // //Q18
+
         </script>
     </body>
 </html>
