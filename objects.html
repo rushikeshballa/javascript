@@ -2,14 +2,15 @@
     <head></head>
     <body>
         <script>
-             var person = {
-                                "firstName" : "Harry",
-                                "lastName" : "Potter",
-                                "age": 30,
-                                "gender": "male",
-                                "skill" : "ReactJS",                                
-                                "expertise": "Beginner"
-                            };
+            // Q69 
+            //  var person = {
+            //                     "firstName" : "Harry",
+            //                     "lastName" : "Potter",
+            //                     "age": 30,
+            //                     "gender": "male",
+            //                     "skill" : "ReactJS",                                
+            //                     "expertise": "Beginner"
+            //                 };
                             // // // Print the firstname.
                             // console.log(person.firstName);
 
@@ -23,13 +24,189 @@
 
 
                            // // If the age is less than 18, then print "false". If the age is more than 18, then print "true".
-                           if (person.age>=18) {
-                            console.log(true);
-                           }
-                           else{
-                            console.log(false);
-                           }
+                        //    if (person.age>=18) {
+                        //     console.log(true);
+                        //    }
+                        //    else{
+                        //     console.log(false);
+                        //    }
+
+
+
+                    // // Q70  // // For the given marks object solve the following
+                            // var marks = {
+                            //     "maths" : 34,
+                            //     "english" : 56,
+                            //     "science": 32,
+                            //     "hindi" : 75,
+                            //     "social science": 65
+                            // };
+                            // //Print the marks of all the subjects.
+                            // for(var a in marks){
+                            //     console.log(marks[a]);
+                            // }
+                           
+
+                            // //Print the names of all the subjects from the given object.
+                            // for(var k in marks){
+                            //     console.log(k);
+                            // }
                             
+                            // //Count the number of subjects from the given object.
+                            // var c=0;
+                            // for(var a in marks){
+                            //     c++;
+                            // }
+                            // console.log(c);
+                            
+
+                            // //Print the percentage of the marks of the student.
+                            // var sum=0;
+                            // var c=0;
+                            // for(var a in marks){
+                            //     sum =sum+marks[a];
+                            //     c++;
+                            // }
+                            // console.log(sum/c);
+
+
+                            // //Print only those subjects where the student scored more than 35.
+                            // for(var a in marks){
+                            //     if (marks[a]>=35) {
+                            //         console.log(marks[a]);
+                            //     }
+                            // }
+
+
+                            // //Print the pass/fail status of the subjects provided 35 is the pass mark.
+                            // for(var a in marks){
+                            //     if (marks[a]>=35) {
+                            //         console.log(a,"pass"); 
+                            //     }
+                            //     else{
+                            //         console.log(a,"fail");   
+                            //     }
+                            // }
+
+
+                            // //Print only the passed subjects.
+                            // for(var a in marks){
+                            //     if (marks[a]>=35) {
+                            //         console.log(a);
+                            //     }
+                            // }
+
+                            // //Count the number of passed subjects.
+                            // var c=0;
+                            // for(var a in marks){
+                            //     if (marks[a]>=35) {
+                            //         c++;
+                            //     }
+                            // }
+                            // console.log(c);
+                            
+
+                            // //Print only the failed subjects.
+                            // for(var a in marks){
+                            //     if (marks[a]<35) {
+                            //         console.log(a);
+                                    
+                            //     }
+                            // }
+
+
+                            // //Count the number of failed subjects.
+                            // var c=0;
+                            // for(var a in marks){
+                            //     if (marks[a]<35) {
+                            //         c++;
+                            //     }
+                            // }
+                            // console.log(c);
+                            
+
+                            // //Print the least scored subject.
+                            // var min=99999999;
+                            // var le;
+                            // for(var a in marks){
+                            //     if (min>marks[a]) {
+                            //         min=marks[a]
+                            //         le=a;
+                            //     }
+                            // }
+                            // console.log(le);
+
+                            // //Print the highest scored subject.
+                            // var max=0;
+                            // var hi;
+                            // for(var a in marks){
+                            //     if (max<marks[a]) {
+                            //         max=marks[a]
+                            //         hi=a;
+                            //     }
+                            // }
+                            // console.log(hi);
+                            
+
+                            // //Check whether the student has passed in all the subjects or not.
+                            // var c=0;
+                            // for(var a in marks){
+                            //     if (marks[a]<35) {
+                            //         c++;
+                            //     }
+                            // }
+                            // if (c>0) {
+                            //     console.log("not passed in all subjects");
+                            // }
+                            // else{
+                            //     console.log("yes passed in all subjects ");
+                            // }
+
+
+                            // //Take the subject name from the student through prompt box and print the subject marks and pass/fail status.
+                            //  var marks = {
+                            //     "maths" : +prompt(),
+                            //     "english" : +prompt(),
+                            //     "science": +prompt(),
+                            //     "hindi" : +prompt(),
+                            //     "social science": +prompt(),
+                            // };
+                            // var c=0;
+                            // for(var a in marks){
+                            //     console.log(a,marks[a]);
+                            //     if (marks[a]<35) {
+                            //         c++;
+                            //     }
+                            // }
+                            // if (c>0) {
+                            //     console.log("fail");
+                            // }
+                            // else{
+                            //     console.log("pass");
+                                
+                            // }
+                            
+
+                            // //Write a program to merge two objects using the following methods:
+                            //  1 Object.assign()
+                            //  2 for...in loop
+                            //  3 Destructuring(after learning ES6)
+                            // Example:
+                                // var obj1 = {
+                                //     "name": "Edupoly",
+                                //     "location": "Hyderabad"
+                                // }
+                                // var obj2 = {
+                                //     "employees": 10,
+                                //     "type": "Training Institute"
+                                // }
+                                // Expected output:
+                                // var org = {
+                                //     "name": "Edupoly",
+                                //     "location": "Hyderabad",
+                                //     "employees": 10,
+                                //     "type": "Training Institute"
+                                // }
                                         
         </script>
     </body>
