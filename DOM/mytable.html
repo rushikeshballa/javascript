@@ -1,0 +1,76 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <table border="2px solid">
+            <tbody id="q1">
+
+            </tbody>
+
+            <script>
+                  var person=[{ "Name":"praveen",
+                      "Age":36,
+                      "Gender":"male",
+                      "Salary":10000,
+                      "City":"hyd",
+
+                    },
+                    { "Name":"srikanth",
+                      "Age":32,
+                      "Gender":"male",
+                      "Salary":20000,
+                      "City":"bangaluru"
+
+                    },
+                    { "Name":"pradeep",
+                      "Age":21,
+                      "Gender":"male",
+                      "Salary":25000,
+                      "City":"hyd"
+
+                    },
+                    { "Name":"mounika",
+                      "Age":20,
+                      "Gender":"female",
+                      "Salary":30000,
+                      "City":"nalgonda",
+
+                    },
+                    { "Name":"nikhil",
+                      "Age":22,
+                      "Gender":"male",
+                      "Salary":20000,
+                      "City":"guntur",
+
+                    },
+                    { "Name":"riya",
+                      "Age":14,
+                      "Gender":"female",
+                      "Salary":4000,
+                      "City":"indore",
+
+                    },
+
+                    ]
+                    
+                    person.forEach(function (i,f) {
+                        var x=document.createElement('tr');
+                        document.getElementById("q1").appendChild(x)   
+                        for(var k in person[f]){
+                          if (f==0) {
+                            var g=document.createElement('th');
+                            g.innerText=k;
+                            document.getElementById('q1').appendChild(g);
+                          }
+                        }
+                        for(var a in person[f]){
+                            var c=document.createElement('td')
+                            c.innerText=person[f][a]; 
+                            document.getElementById("q1").appendChild(x).appendChild(c); 
+                        }
+                           
+                    })
+
+            </script>
+    </body>
+</html>
