@@ -1,6 +1,9 @@
 <html>
     <head></head>
     <body>
+        <table border="2" id="q1">
+    
+        </table>
         <script>
             // // Q1 Create one h1 element and put some text into it.
             // var x=document.createElement('h1')
@@ -37,11 +40,62 @@
 
 
             // //. Take an array of objects and create a table form it
-            var ob=[{""
+            var person=[{ "Name":"praveen",
+                      "Age":36,
+                      "Gender":"male",
+                      "Salary":10000,
+                      "City":"hyd",
 
-                    }
+                    },
+                    { "Name":"srikanth",
+                      "Age":32,
+                      "Gender":"male",
+                      "Salary":20000,
+                      "City":"bangaluru"
+
+                    },
+                    { "Name":"pradeep",
+                      "Age":21,
+                      "Gender":"male",
+                      "Salary":25000,
+                      "City":"hyd"
+
+                    },
+                    { "Name":"mounika",
+                      "Age":20,
+                      "Gender":"female",
+                      "Salary":30000,
+                      "City":"nalgonda",
+
+                    },
+                    { "Name":"nikhil",
+                      "Age":22,
+                      "Gender":"male",
+                      "Salary":20000,
+                      "City":"guntur",
+
+                    },
+                    { "Name":"riya",
+                      "Age":14,
+                      "Gender":"female",
+                      "Salary":4000,
+                      "City":"indore",
+
+                    },
 
                     ]
+                    
+                    person.forEach(function (i,f) {
+                        var x=document.createElement('td');
+                        document.getElementById("q1").appendChild(x)   
+                        for(var a in person[f]){
+                            var c=document.createElement('tr')
+                            c.innerText=person[f][a]; 
+                            document.getElementById("q1").appendChild(x).appendChild(c); 
+                           
+                        }
+                           
+                    })
 
         </script>
     </body>
