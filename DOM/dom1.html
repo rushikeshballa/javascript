@@ -1,0 +1,103 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table border="2px solid">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="a1">
+
+        </tbody>
+        </table>
+
+        <div  id="a2"></div>
+    
+        <script>
+                    var person=[{ "Name":"praveen",
+                      "Age":36,
+                      "Gender":"male",
+                      "Salary":10000,
+                      "City":"hyd",
+
+                    },
+                    { "Name":"srikanth",
+                      "Age":32,
+                      "Gender":"male",
+                      "Salary":20000,
+                      "City":"bangaluru"
+
+                    },
+                    { "Name":"pradeep",
+                      "Age":21,
+                      "Gender":"male",
+                      "Salary":25000,
+                      "City":"hyd"
+
+                    },
+                    { "Name":"mounika",
+                      "Age":20,
+                      "Gender":"female",
+                      "Salary":30000,
+                      "City":"nalgonda",
+
+                    },
+                    { "Name":"nikhil",
+                      "Age":22,
+                      "Gender":"male",
+                      "Salary":20000,
+                      "City":"guntur",
+
+                    },
+                    { "Name":"riya",
+                      "Age":14,
+                      "Gender":"female",
+                      "Salary":4000,
+                      "City":"indore",
+
+                    },
+
+                    ]
+                    // Q1 table 
+                    person.forEach(function (a,i)
+                    {
+                    var x=document.createElement('tr');
+                    var name=document.createElement('td')
+                    name.innerHTML=a.Name;
+                    var age=document.createElement("td");
+                    age.innerHTML=a.Age;
+                    var gender=document.createElement('td')
+                    gender.innerHTML=a.Gender;
+                    var sal=document.createElement('td')
+                    var city=document.createElement('td')
+                    sal.innerHTML=a.Salary;
+                    city.innerHTML=a.City;
+                    x.appendChild(name);
+                    x.appendChild(age);
+                    x.appendChild(gender);
+                    x.appendChild(sal);
+                    x.appendChild(city);
+                    document.getElementById('a1').appendChild(x)
+                    });
+
+                    // //Q2 image
+                    var ar=["https://images.pexels.com/photos/2754200/pexels-photo-2754200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","https://r1.ilikewallpaper.net/iphone-wallpapers/download/25189/Nature-Mist-Mountain-Wood-Forest-River-Landscape-iphone-wallpaper-ilikewallpaper_com_200.jpg","https://r1.ilikewallpaper.net/iphone-wallpapers/download/77606/Tropical-afternoon-in-beautiful-Maui-Hawaii-iphone-wallpaper-ilikewallpaper_com_200.jpg","https://r1.ilikewallpaper.net/iphone-wallpapers/download-147129/river-surrounded-by-trees_200.jpg",]
+                    ar.forEach(function (z,q) { 
+                        var im=document.createElement('img')
+                        im.setAttribute('src',z)
+                        im.style.width="30%"
+                        im.style.height="100%"
+                        document.getElementById('a2').appendChild(im)
+                        
+                    })
+                    
+        </script>
+    </body>
+</html>

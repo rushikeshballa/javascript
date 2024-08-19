@@ -3,6 +3,9 @@
     </head>
     <body>
         <table border="2px solid">
+            <thead id="q2">
+
+            </thead>
             <tbody id="q1">
 
             </tbody>
@@ -56,11 +59,15 @@
                     person.forEach(function (i,f) {
                         var x=document.createElement('tr');
                         document.getElementById("q1").appendChild(x)   
+                       if (f==0) {
+                         var y=document.createElement('tr');
+                        document.getElementById("q2").appendChild(y)   
+                       }
                         for(var k in person[f]){
                           if (f==0) {
                             var g=document.createElement('th');
                             g.innerText=k;
-                            document.getElementById('q1').appendChild(g);
+                            document.getElementById('q2').appendChild(y).appendChild(g);
                           }
                         }
                         for(var a in person[f]){
