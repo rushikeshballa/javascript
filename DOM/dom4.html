@@ -1,6 +1,15 @@
 <html>
     <head></head>
     <body>
+        <table border="1px solid" id="a1">
+
+        </table>
+
+        <table border="1px solid">
+            <thead id="a2"></thead>
+            <tbody id="a3"></tbody>
+        </table>
+
         <script>
             // //Q8 Generate UI using document object for the given Array of Objects
 
@@ -56,8 +65,53 @@
                         ];
                 
 
-                        // //Q1Display all the people's data in a table.
+                        // // //Q1Display all the people's data in a table.
+                        // var a=document.createElement('thead');
+                        // var c=document.createElement('tr');
+                        // document.getElementById('a1').appendChild(a).appendChild(c);
+                        // var f=document.createElement('tbody');
+                        // people.forEach(function (b,i) {
+                        //     for(var e in people[i]){
+                        //      if(i==0){
+                        //         var d=document.createElement('th');
+                        //         d.innerText=e;
+                        //        c.appendChild(d)
+                                
+                        //      }
+                        //     }
+                        //     var g=document.createElement('tr');
+                        //     for(var h in people[i]){
+                        //         var j=document.createElement('td');
+                        //         j.innerText=people[i][h];
+                        //         g.appendChild(j);
+                        //     }
+                        //     document.getElementById('a1').appendChild(g)
+
+
+                        // })
+
+
+
+                        // //Q2Display all male and female people in two separate tables.
+                        var a=document.createElement('tr');
+                        people.forEach(function (b,i) {
+                          document.getElementById('a2').appendChild(a)
                         
+                          for(var d in people[i]){
+                            if (i==0) {
+                                var c=document.createElement('th');
+                                    c.innerHTML=d;
+                                a.appendChild(c);
+                                
+                            }
+                            }
+                            
+                        })
+
+                        
+
+
+
         </script>
     </body>
 </html>
