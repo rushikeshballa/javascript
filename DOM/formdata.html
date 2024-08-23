@@ -1,0 +1,34 @@
+<html>
+    <head></head>
+    <body>
+        <form  onsubmit="asd(event)" >
+            <input type="text" name="fullname">:fullname
+            <br>
+            <input type="number" name="age">:age
+            <br>
+            <input type="checkbox" name="as">:as
+            df: <input type="checkbox" name="as">
+            <br>            
+            <button>sumit</button>
+        </form>
+        <script>
+            function asd(ev) {
+                ev.preventDefault();
+                var x=new FormData(ev.target); 
+                var per={}
+                var y=x.keys();
+                console.log(y);
+                
+                for(var i of y){
+                if (x.getAll(i).length==1) {
+                    per[i]=x.get(i);
+                }
+                else{
+                    per[i]=x.getAll(i);
+                }
+                }
+               console.log(per);
+            }
+        </script>
+    </body>
+</html>
