@@ -16,6 +16,8 @@
         <div id="a8"></div>
         <div id="a9"></div>
         <div id="a10"></div>
+        <div id="a11"></div>
+        <div id="a12"></div>
         <script  type="text/babel">
            
             var a=<h2>Welcome to JSX</h2>;
@@ -56,9 +58,16 @@
             var l=<h1>{'praveen'.split("").reverse().join("")}</h1>;
             ReactDOM.render(l,document.getElementById('a10'));
 
-            
+            var m=100;
+            var n=312;
+            var o=<h1>{m+n}</h1>;
+            ReactDOM.render(o,document.getElementById('a11'));
 
-            
+            var p=<h1>{m>n?m:n}</h1>
+            ReactDOM.render(p,document.getElementById('a12'))
+
+
+
 
         </script>
     </body>
