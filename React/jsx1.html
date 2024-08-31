@@ -7,15 +7,56 @@
     </head>
     <body>
         <div id="a1"></div>
-        
+        <div id="a2"></div>
+        <div id="a3"></div>
+        <div id="a4"></div>
+        <div id="a5"></div>
+        <div id="a6"></div>
+        <div id="a7"></div>
+        <div id="a8"></div>
+        <div id="a9"></div>
+        <div id="a10"></div>
         <script  type="text/babel">
-           // // Q1
-            var a=<h2>We</h2>;
+           
+            var a=<h2>Welcome to JSX</h2>;
             ReactDOM.render(a,document.getElementById('a1'))
 
-            // //Q2
+        
             var b=<h1>Welcome to JSX{10+20}</h1>;
-            ReactDOM.render(b,document.getElementById('a1'));
+            ReactDOM.render(b,document.getElementById('a2'));
+
+            var c=<h1>{"praveen"+"gubbala"}</h1>;
+            ReactDOM.render(c,document.getElementById('a3'));
+
+            var d=[12,3,56,78];
+            var e=<ul>{
+                d.map(f=>{
+                    return <li>{f}</li>;
+                })
+            }</ul>
+            ReactDOM.render(e,document.getElementById('a4'))
+
+            var g=["praveen","gubbala","srikanth"];
+            var g=<h1>{g}</h1>;
+            ReactDOM.render(g,document.getElementById('a5'))
+
+
+            var h=<h1>{Math.sqrt(14)}</h1>;
+            ReactDOM.render(h,document.getElementById('a6'));
+
+            var i=<h1>{parseInt(134.42)}</h1>;
+            ReactDOM.render(i,document.getElementById('a7'))
+            
+            var j=<h1>{"praveen".toUpperCase()}</h1>;
+            ReactDOM.render(j,document.getElementById("a8"));
+
+            var k=<h1>{'praveen'.length}</h1>;
+            ReactDOM.render(k,document.getElementById('a9'));
+
+            var l=<h1>{'praveen'.split("").reverse().join("")}</h1>;
+            ReactDOM.render(l,document.getElementById('a10'));
+
+            
 
         </script>
     </body>
