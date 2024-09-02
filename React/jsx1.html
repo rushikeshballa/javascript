@@ -20,62 +20,92 @@
         <div id="a12"></div>
         <div id="a13"></div>
         <div id="a14"></div>
+       
+
         <script  type="text/babel">
            
-            var a=<h2>Welcome to JSX</h2>;
-            ReactDOM.render(a,document.getElementById('a1'))
+            // var a=<h2>Welcome to JSX</h2>;
+            // ReactDOM.render(a,document.getElementById('a1'))
 
         
-            var b=<h1>Welcome to JSX{10+20}</h1>;
-            ReactDOM.render(b,document.getElementById('a2'));
+            // var b=<h1>Welcome to JSX{10+20}</h1>;
+            // ReactDOM.render(b,document.getElementById('a2'));
 
-            var c=<h1>{"praveen"+"gubbala"}</h1>;
-            ReactDOM.render(c,document.getElementById('a3'));
+            // var c=<h1>{"praveen"+"gubbala"}</h1>;
+            // ReactDOM.render(c,document.getElementById('a3'));
 
-            var d=[12,3,56,78];
-            var e=<ul>{
-                d.map(f=>{
-                    return <li>{f}</li>;
+            // var d=[12,3,56,78];
+            // var e=<ul>{
+            //     d.map(f=>{
+            //         return <li>{f}</li>;
+            //     })
+            // }</ul>
+            // ReactDOM.render(e,document.getElementById('a4'))
+
+            // var g=["praveen","gubbala","srikanth"];
+            // var g=<h1>{g}</h1>;
+            // ReactDOM.render(g,document.getElementById('a5'))
+
+
+            // var h=<h1>{Math.sqrt(14)}</h1>;
+            // ReactDOM.render(h,document.getElementById('a6'));
+
+            // var i=<h1>{parseInt(134.42)}</h1>;
+            // ReactDOM.render(i,document.getElementById('a7'))
+            
+            // var j=<h1>{"praveen".toUpperCase()}</h1>;
+            // ReactDOM.render(j,document.getElementById("a8"));
+
+            // var k=<h1>{'praveen'.length}</h1>;
+            // ReactDOM.render(k,document.getElementById('a9'));
+
+            // var l=<h1>{'praveen'.split("").reverse().join("")}</h1>;
+            // ReactDOM.render(l,document.getElementById('a10'));
+
+            // var m=-100;
+            // var n=312;
+            // var o=<h1>{m+n}</h1>;
+            // ReactDOM.render(o,document.getElementById('a11'));
+
+            // var p=<h1>{m>n?m:n}</h1>
+            // ReactDOM.render(p,document.getElementById('a12'))
+
+            // var Q=<h1>{n%2==0?"even":"odd"}</h1>;
+            // ReactDOM.render(Q,document.getElementById('a13'));
+            
+            // var r=<h1>{m>=0?"pos":"neg"}</h1>;
+            // ReactDOM.render(r,document.getElementById('a14'));
+
+            // var s=34;
+            // var t=<h1>{a>b?(a>c?a:c):(b>c?b:c)}</h1>;
+
+            // var a=+prompt();
+            // var v=<div>{a%2==0?(<h1>Even</h1>):(<h1>odd</h1>)}</div>;
+            // ReactDOM.render(v,document.getElementById("a1"));
+
+
+            // var a=+prompt();
+            // var b=<div>{a%2==0?(<img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg"></img>):
+            //     (<img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg"></img>)}</div>;
+            //     ReactDOM.render(b,document.getElementById('a1'));
+
+
+
+            //  var a=+prompt();
+            // var b=<div>{a%2==0?( <a href="https://edupoly.in/courses/frontend-with-react/frontend-with-react.html"><img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg"></img></a>):
+            //     ( <a href="https://edupoly.in/courses/frontend-with-react/frontend-with-react.html"><img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg" ></img></a>)}</div>;
+            //     ReactDOM.render(b,document.getElementById('a1'));
+
+
+            var ar=[23,34,54,10,4,7];
+            var a=<ul>{
+                ar.map(b=>{
+                    return<li>{b}</li>;
                 })
             }</ul>
-            ReactDOM.render(e,document.getElementById('a4'))
-
-            var g=["praveen","gubbala","srikanth"];
-            var g=<h1>{g}</h1>;
-            ReactDOM.render(g,document.getElementById('a5'))
+            ReactDOM.render(a,document.getElementById('a1'));
 
 
-            var h=<h1>{Math.sqrt(14)}</h1>;
-            ReactDOM.render(h,document.getElementById('a6'));
-
-            var i=<h1>{parseInt(134.42)}</h1>;
-            ReactDOM.render(i,document.getElementById('a7'))
-            
-            var j=<h1>{"praveen".toUpperCase()}</h1>;
-            ReactDOM.render(j,document.getElementById("a8"));
-
-            var k=<h1>{'praveen'.length}</h1>;
-            ReactDOM.render(k,document.getElementById('a9'));
-
-            var l=<h1>{'praveen'.split("").reverse().join("")}</h1>;
-            ReactDOM.render(l,document.getElementById('a10'));
-
-            var m=-100;
-            var n=312;
-            var o=<h1>{m+n}</h1>;
-            ReactDOM.render(o,document.getElementById('a11'));
-
-            var p=<h1>{m>n?m:n}</h1>
-            ReactDOM.render(p,document.getElementById('a12'))
-
-            var Q=<h1>{n%2==0?"even":"odd"}</h1>;
-            ReactDOM.render(Q,document.getElementById('a13'));
-            
-            var r=<h1>{m>=0?"pos":"neg"}</h1>;
-            ReactDOM.render(r,document.getElementById('a14'));
-
-
-            
         </script>
     </body>
 </html>
