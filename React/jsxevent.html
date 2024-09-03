@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="a1"></div>
+
+        <script type="text/babel">
+            // function abc() {
+            //     alert("hello edupoly");
+            // }
+            // var a=<button onClick={abc}>click</button>
+            // ReactDOM.render(a,document.getElementById('a1'));
+
+
+
+            // function abc() {
+            //     console.log("hello");
+            // }
+            // var a= <button onClick={abc}>hello world</button>;
+            // ReactDOM.render(a,document.getElementById('a1'));
+
+
+
+            // function abc(e) {
+            //     console.log(e);
+            // }
+            // var a= <button onClick={abc}>click</button>;
+            // ReactDOM.render(a,document.getElementById('a1'));
+
+
+
+            // function abc(e) {
+            //     console.log(e);
+            // }
+            // var a=<div onClick={abc} style={{width:"300px",height:"200px",border:'2px solid'}}>hello Edupoly</div>
+            // ReactDOM.render(a,document.getElementById('a1'));
+
+
+
+            //  function abc(e) {
+            //     console.log(e.target.innerHTML);
+            // }
+            // var a=<div onClick={abc} style={{width:"300px",height:"200px",border:'2px solid'}}>hello Edupoly</div>
+            // ReactDOM.render(a,document.getElementById('a1'));
+
+
+            function abc(e) {
+                console.log(e.target.id);
+            }
+            var a=<div id="asd" onClick={abc}>qwerw</div>
+            ReactDOM.render(a,document.getElementById('a1'))
+
+
+
+        </script>
+    </body>
+</html>
