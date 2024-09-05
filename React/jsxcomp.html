@@ -118,23 +118,25 @@
     // ReactDOM.render(<A></A>,document.getElementById('a1'));
 
 
-    var A=(()=>{
-        return <div>
-            {
-                students.map((a)=>{
-                   return <div>
+    var A=((c)=>{
+       return  students.map((a)=>{
+                   return <div style={{border:'1px solid'}}>
                      {Object.keys(a).map((b)=>{
-                        <h1>{a.b}</h1>
+                       return <h1>{b+":"+(a[b])}</h1>
                      })
                      } 
                     </div>
                 })
-            }
-            </div>
-
     })
+    var i=<div style={{display:"flex"}}>
+        {
+            students.map(()=>{
+                return <A></A>
+            })
+        }
+        </div>
+    ReactDOM.render(i,document.getElementById('a1'));
 
-    ReactDOM
 
         
 
