@@ -150,16 +150,45 @@
 
 
 
+            // var A=(()=>{
+            //     var [a,SetA]=React.useState(+prompt())
+            //     return (
+            //     a%2==0?<h1>even</h1>:<i>odd</i>
+            //     )
+            // })
+            // ReactDOM.render(<A/>,document.getElementById('a1'));
+
+
+            // var A=(()=>{
+            //     var [a,setA]=React.useState(+prompt())
+            //     return (
+            //         <img src={a%2==0?"https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg":"https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg"} alt=""/>
+            //     )
+            // })
+            // ReactDOM.render(<A/>,document.getElementById('a1'))
+
+
             var A=(()=>{
-                var x=+prompt()
-                var [a,SetA]=React.useSttate(x)
-                return (
-                a%2==0?<h1>even</h1>:<i>odd</i>
-                )
+                var [a,setA]=React.useState(["dog","cat","pig","mouse","tiger","lion"])
+               return <div>
+                <ul>
+                {
+                    a.map((b)=>{
+                        return <li>{b}</li>
+                    })
+                }    
+                </ul>
+                <ol>
+                    {
+                    a.map((c)=>{
+                        return <li>{c}</li>
+                    })
+                }     
+                </ol>
+                </div>
+            
             })
-            ReactDOM.render(<A/>,document.getElementById('a1'));
-
-
+            ReactDOM.render(<A />,document.getElementById('a1'));
 
 
         </script>
