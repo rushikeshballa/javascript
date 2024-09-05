@@ -130,12 +130,34 @@
 
 
 
-            var 
+            // var A=(()=>{
+            //     var [a,setA]=React.useState(-123);
+            //     return <h1>{a>0?"pos":"neg"}</h1>
+            // })
+            // ReactDOM.render(<A/>,document.getElementById('a1'));
 
 
 
+            // var A=(()=>{
+            //     var [a,setA]=React.useState(123)
+            //     var [b,setB]=React.useState(234)
+            //     var [c,SetC]=React.useState(46)
+            //     return <h1>
+            //         {a>b?(a>c?a:c):(b>c?b:c)}
+            //         </h1>
+            // })
+            // ReactDOM.render(<A/>,document.getElementById('a1'));
 
 
+
+            var A=(()=>{
+                var x=+prompt()
+                var [a,SetA]=React.useSttate(x)
+                return (
+                a%2==0?<h1>even</h1>:<i>odd</i>
+                )
+            })
+            ReactDOM.render(<A/>,document.getElementById('a1'));
 
 
 
