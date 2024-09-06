@@ -168,28 +168,38 @@
             // ReactDOM.render(<A/>,document.getElementById('a1'))
 
 
-            var A=(()=>{
-                var [a,setA]=React.useState(["dog","cat","pig","mouse","tiger","lion"])
-               return <div>
-                <ul>
-                {
-                    a.map((b)=>{
-                        return <li>{b}</li>
-                    })
-                }    
-                </ul>
-                <ol>
-                    {
-                    a.map((c)=>{
-                        return <li>{c}</li>
-                    })
-                }     
-                </ol>
-                </div>
-            
-            })
-            ReactDOM.render(<A />,document.getElementById('a1'));
+            // var A=(()=>{
+            //     var [a,setA]=React.useState(["dog","cat","pig","mouse","tiger","lion"])
+            //    return <div>
+            //     <ul>
+            //     {
+            //         a.map((b)=>{
+            //             return <li>{b}</li>
+            //         })
+            //     }    
+            //     </ul>
+            //     <ol>
+            //         {
+            //         a.map((c)=>{
+            //             return <li>{c}</li>
+            //         })
+            //     }     
+            //     </ol>
+            //     </div>
+            // })
+            // ReactDOM.render(<A />,document.getElementById('a1'));
 
+            var nums =[2,5,5,11];
+            var target =10;
+            for(var i=0;i<nums.length-1;i++){
+             for(var j=i+1;j<=nums.length-1;j++){
+                console.log(i,j);
+                
+            if(nums[i]+nums[j]==target){
+                console.log([i,j]);
+            }
+        }
+    };
 
         </script>
     </body>
