@@ -100,22 +100,22 @@
         },
     ]
 
-    // var A=  (()=>{
+    var A=  (()=>{
         
-    //   return  <div style={{display:"flex", flexWrap:"wrap"}}>{
-    // students.map((b,i)=>{
-    //    return <div style={b.gender=="male"?{backgroundColor:'lightblue', padding:"10px",margin:'10px',border:'1px solid'}:{backgroundColor:'pink', padding:"10px",margin:'10px',border:'1px solid'}}>
-    //       {
-    //         Object.keys(b).map((c)=>{
-    //           return <h1>{c+":"+(b[c])}</h1>
-    //       })
+      return  <div style={{display:"flex", flexWrap:"wrap"}}>{
+    students.map((b,i)=>{
+       return <div style={b.gender=="male"?{backgroundColor:'lightblue', padding:"10px",margin:'10px',border:'1px solid'}:{backgroundColor:'pink', padding:"10px",margin:'10px',border:'1px solid'}}>
+          {
+            Object.keys(b).map((c)=>{
+              return <h1>{c+":"+(b[c])}</h1>
+          })
 
-    //       }  
-    //      </div>
-    //     })
-    //           }</div>
-    //      })
-    // ReactDOM.render(<A></A>,document.getElementById('a1'));
+          }  
+         </div>
+        })
+              }</div>
+         })
+    ReactDOM.render(<A></A>,document.getElementById('a1'));
 
 
     // var A=((c)=>{
