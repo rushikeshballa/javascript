@@ -6,10 +6,8 @@
  
     </head>
     <body>
-        
         <div id="a1"></div>
         <script type="text/babel">
-
             var ba1={name:"asd",
                 score:0,
                 set:0,
@@ -20,20 +18,26 @@
                 set:0,
                 serv:true,
             }
-
-            function abc() {
-                 <div>
+            function abc() {   
+               var a=<div>
                     <table>
                     <tr>
                         <td>name:{ba1.name}</td>
-                        <td></td>
-                        
+                        <td>{ba1.serv && <button>0</button> }</td>
+                        <td>{ba1.set}</td>
+                        <td>{ba1.score}</td>
                         </tr>    
-                    <tr></tr>
+                        <tr>
+                        <td>name:{ba2.name}</td>
+                        <td>{ba2.serv && <button>0</button>}</td>
+                        <td>{ba2.set}</td>
+                        <td>{ba2.score}</td>
+                        </tr>
                     </table>
                 </div>
-                ReacrDOM.render(abc,document.getElementById('a1'));
+                ReactDOM.render(a,document.getElementById('a1'));
             }
+            abc();
         </script>
     </body>
 </html>
