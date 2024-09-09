@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="a2"></div>
+
+        <script type="text/babel">
+            var ar=[];
+            function abc() {
+                var a=document.getElementById('a1').value
+                ar.push(a);
+                todo();
+            }
+            var asd=((s)=>{
+                ar.splice(s,1);
+                todo();
+            })
+            function todo() {
+                var to= <div>
+                    
+                    <input id="a1" type="text"/>
+                    <button onClick={abc}>add</button>
+                    <div>
+                    {
+                        ar.map((b,i)=>{
+                            return <div>
+                                <li>{b}</li>
+                                <button onClick={(()=>{asd(i)})}>delete</button>
+                                </div>
+                        })
+                    }    
+                    </div>
+                        </div>
+                        ReactDOM.render(to,document.getElementById('a2'))
+            }
+            todo();
+
+
+            
+        </script>
+    </body>
+</html>
