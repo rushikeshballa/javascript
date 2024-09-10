@@ -18,6 +18,28 @@
                 set:0,
                 serv:true,
             }
+            function p1() {
+                ba1.score=ba1.score+1;
+                ba1.serv=true;
+                ba2.serv=false;
+                if (ba1.score>=21 && ba1.score-ba2.score>=2 ) {
+                    ba1.set++;
+                    ba1.score=0;
+                    ba2.score=0;
+                }
+                abc();
+            }
+            function p2() {
+                ba2.score=ba2.score+1;
+                ba2.serv=true;
+                ba1.serv=false;
+                if (ba2.score>=21 && ba2.score-ba1.score>=2 ) {
+                    ba2.set++;
+                    ba2.score=0;
+                    ba1.score=0;
+                }
+                abc();
+            }
             function abc() {   
                var a=<div>
                     <table>
@@ -26,18 +48,21 @@
                         <td>{ba1.serv && <button>0</button> }</td>
                         <td>{ba1.set}</td>
                         <td>{ba1.score}</td>
+                        <td><button onClick={p1}>add</button></td>
                         </tr>    
                         <tr>
                         <td>name:{ba2.name}</td>
                         <td>{ba2.serv && <button>0</button>}</td>
                         <td>{ba2.set}</td>
                         <td>{ba2.score}</td>
+                        <td><button onClick={p2}>add</button></td>
                         </tr>
                     </table>
                 </div>
                 ReactDOM.render(a,document.getElementById('a1'));
             }
             abc();
+            
         </script>
     </body>
 </html>
