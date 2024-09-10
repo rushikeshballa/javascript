@@ -1,0 +1,109 @@
+<head>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        
+        <div id="a1"></div>
+        <div id="a3"></div>
+        <script type="text/babel">
+            var ar=[];
+            var ba1={name:"Sharath Kamal",
+                score:0,
+                set:0,
+            }
+            var ba2={name:"Hugo Calderano",
+                score:0,
+                set:0,
+            }
+            function p1() {
+                ba1.score=ba1.score+1;
+                if (ba1.score>=11) {
+                    ar.push({
+                        na:ba1.name,
+                        sco:ba1.score,
+                        se:ba1.set,
+                        na2:ba2.name,
+                        sco2:ba2.score,
+                        se2:ba2.set
+                    })
+                    ba1.set++;
+                    ba1.score=0;
+                    ba2.score=0; 
+                } 
+                abc();
+                xc();
+            }
+            function p2() {
+                ba2.score=ba2.score+1;
+                if (ba2.score>=11) {
+                    ar.push({
+                        na:ba1.name,
+                        sco:ba1.score,
+                        se:ba1.set,
+                        na2:ba2.name,
+                        sco2:ba2.score,
+                        se2:ba2.set
+                    })
+                    ba2.set++;
+                    ba2.score=0;
+                    ba1.score=0;
+                }
+                abc();
+                xc();
+            }
+            function abc() {   
+               var a=<div>
+                    <table>
+                    <tr>
+                        <td>name:{ba1.name}</td>
+                        <td>{ba1.set}</td>
+                        <td>{ba1.score}</td>
+                        <td><button onClick={p1}>add</button></td>
+                        </tr>    
+                        <tr>
+                        <td>name:{ba2.name}</td>
+                        <td>{ba2.set}</td>
+                        <td>{ba2.score}</td>
+                        <td><button onClick={p2}>add</button></td>
+                   </tr>
+                    </table>
+                </div>
+                ReactDOM.render(a,document.getElementById('a1'));
+            }
+            abc();
+           
+            
+          function xc() {
+            var su= <div>
+             <table borde="2px solid">
+            <thead>
+                <tr>
+                <th>Name</th>
+                <th>score</th> 
+                <th>set</th>
+                <th>Name</th>
+                <th>score</th> 
+                <th>set</th>
+                </tr>
+            </thead>    
+            <tbody>
+                {ar.map((i)=>{
+                return <tr> {
+                    Object.keys(i).map((j)=>{
+                        return <td>{i[j]}</td>
+                    })
+                }    </tr> })}
+            </tbody>
+            </table>
+           </div>
+            ReactDOM.render(su,document.getElementById('a3'))
+          }
+          xc();
+
+        </script>
+    </body>
+</head>
