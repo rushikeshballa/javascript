@@ -7,7 +7,7 @@
     </head>
     <body>
         <div id="a2"></div>
-
+        <div id="a3"></div>
         <script type="text/babel">
             var ar=[];
             function abc() {
@@ -21,26 +21,47 @@
             })
             function todo() {
                 var to= <div>
-                    
                     <input id="a1" type="text"/>
                     <button onClick={abc}>add</button>
-                    <div>
-                    {
+                    <div>{
                         ar.map((b,i)=>{
                             return <div>
                                 <li>{b}</li>
                                 <button onClick={(()=>{asd(i)})}>delete</button>
                                 </div>
                         })
-                    }    
-                    </div>
+                    }</div>
                         </div>
                         ReactDOM.render(to,document.getElementById('a2'))
             }
             todo();
-
-
             
+            var counter=(()=>{
+                var c=0;
+                var a=(()=>{
+                    c++;
+                    cou();
+                })
+                var b=(()=>{
+                    c--;
+                    cou();
+                })
+                var d=(()=>{
+                    c=0;
+                    cou();
+                })
+                var cou=(()=>{
+                  var as=  <div>
+                    <h1>count:{c}</h1>    
+                    <button onClick={a}>add</button>
+                    <button onClick={b}>sub</button>
+                    <button onClick={d}>reset</button>
+                    </div>
+                    ReactDOM.render(as,document.getElementById('a3'))
+                })
+                cou();
+            })
+            counter();
         </script>
     </body>
 </html>
