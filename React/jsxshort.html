@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            let indianCricketers = [
+  {
+    name: "Virat Kohli",
+    age: 35,
+    gender: "Male",
+    centuries: 76,
+    halfCenturies: 46,
+    strikeRate: 93.25
+  },
+  {
+    name: "Rohit Sharma",
+    age: 37,
+    gender: "Male",
+    centuries: 32,
+    halfCenturies: 43,
+    strikeRate: 98.33
+  },
+  {
+    name: "Sachin Tendulkar",
+    age: 51,
+    gender: "Male",
+    centuries: 100,
+    halfCenturies: 164,
+    strikeRate: 86.23
+  },
+  {
+    name: "MS Dhoni",
+    age: 43,
+    gender: "Male",
+    centuries: 10,
+    halfCenturies: 73,
+    strikeRate: 87.56
+  },
+  {
+    name: "Rishabh Pant",
+    age: 26,
+    gender: "Male",
+    centuries: 7,
+    halfCenturies: 20,
+    strikeRate: 137.50
+  },
+  {
+    name: "Shubman Gill",
+    age: 24,
+    gender: "Male",
+    centuries: 4,
+    halfCenturies: 16,
+    strikeRate: 88.40
+  },
+  {
+    name: "Smriti Mandhana",
+    age: 28,
+    gender: "Female",
+    centuries: 7,
+    halfCenturies: 30,
+    strikeRate: 87.40
+  },
+  {
+    name: "Harmanpreet Kaur",
+    age: 35,
+    gender: "Female",
+    centuries: 6,
+    halfCenturies: 27,
+    strikeRate: 122.00
+  },
+  {
+    name: "Jasprit Bumrah",
+    age: 30,
+    gender: "Male",
+    centuries: 0,
+    halfCenturies: 0,
+    strikeRate: 0 // Not applicable for a bowler
+  },
+  {
+    name: "Yuzvendra Chahal",
+    age: 34,
+    gender: "Male",
+    centuries: 0,
+    halfCenturies: 0,
+    strikeRate: 0 // Not applicable for a bowler
+  }
+];
+
+function abc(c) {
+    indianCricketers.sort(
+        ((a,b)=>{
+            if (a[c]>b[c]) {
+                return 1
+            }
+            else{
+                return -1
+            }
+        })
+    )
+    ab();
+}
+
+function abz(c) {
+    indianCricketers.sort(
+        ((a,b)=>{
+            if (a[c]>b[c]) {
+                return -1
+            }
+            else{
+                return 1
+            }
+        })
+    )
+    ab();
+}
+
+function abcd(c) {
+    indianCricketers.sort(
+        ((a,b)=>{
+            if (a[c]>b[c]) {
+                return -1
+            }
+            else{
+                return 1
+            }
+        })
+    )
+    ab();
+}
+function abcf(c) {
+    indianCricketers.sort(
+        ((a,b)=>{
+            if (a[c]>b[c]) {
+                return -1
+            }
+            else{
+                return 1
+            }
+        })
+    )
+    ab();
+}
+
+  function ab() {
+    var a=<table border="1">
+        <thead>
+        <tr>
+            <th onClick={(()=>{abc("name")})}>Name</th>
+            <th onClick={(()=>{abc("age")})}>Age</th>
+            <th onClick={(()=>{abc("gender")})}>Gender</th>
+            <th onClick={(()=>{abz("centuries")})}>Centuries</th>
+            <th onClick={(()=>{abcd("halfCenturies")})}>HalfCenturies</th>
+            <th onClick={(()=>{abcf("strikeRate")})}>StrikeRate</th>
+        </tr> 
+        </thead>
+        <tbody>
+        {
+            indianCricketers.map((b)=>{
+               return  <tr>
+                    {
+                        Object.keys(b).map((c)=>{
+                            return <td>{b[c]}</td>
+                        })
+                    }
+                      </tr>
+            })
+        }
+        </tbody>
+        </table>
+        ReactDOM.render(a,document.getElementById('a1'));
+  }
+  ab();
+
+        </script>
+    </body>
+</html>
