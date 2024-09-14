@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+        <div id="a1"></div>
+
+    <script type="text/babel">
+           function Todolist() {
+                var [ar,setA]=React.useState([]);
+                function ab() {
+                    var a=document.getElementById('a2').value;
+                   setA([...ar,{value:a,status:false}]) 
+                }
+                function asd(c) {
+                    ar[c].status=!ar[c].status
+                    setA([...ar])
+                    
+                }
+                function abc(d) {
+                    ar.splice(d,1)
+                    setA([...ar])
+                }
+                React.useEffect(()=>{
+
+                },[])
+               return <div>
+                    <input id="a2" type="text"/>
+                    <button onClick={(()=>{ab()})}>add</button>
+                    <div>
+                        {
+                            ar.map((s,i)=>{
+                                return <li style={s.status?{textDecortion:"line-through",color:"red"}:{}}>{s.value}
+                                    <button onClick={(()=>{asd(i)})}>{s.status?"undo":"done"}</button>
+                                    <button onClick={(()=>{abc(i)})}>delete</button>
+                                    </li>
+                            })
+                        }
+                    </div>
+                     </div>
+            }
+            ReactDOM.render(<Todolist/>,document.getElementById('a1'))
+    </script>
+</body>
+</html>
