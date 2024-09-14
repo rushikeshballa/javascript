@@ -15,6 +15,8 @@
     <script type="text/babel">
            function Todolist() {
                 var [ar,setA]=React.useState([]);
+                var tref=React.useRef();
+                var fgh=React.useRef();
                 function ab() {
                     var a=document.getElementById('a2').value;
                    setA([...ar,{value:a,status:false}]) 
@@ -29,11 +31,16 @@
                     setA([...ar])
                 }
                 React.useEffect(()=>{
-
+                    tref.current.focus()
                 },[])
+                function acc(ev) {
+                   if(ev.key=="Enter"){
+                   fgh.current.focus();
+                   }
+                } 
                return <div>
-                    <input id="a2" type="text"/>
-                    <button onClick={(()=>{ab()})}>add</button>
+                    <input id="a2" type="text" ref={tref} onKeyUp={((ev)=>{acc(ev)})} />
+                    <button ref={fgh} onClick={(()=>{ab()})}  >add</button>
                     <div>
                         {
                             ar.map((s,i)=>{
