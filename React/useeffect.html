@@ -18,8 +18,10 @@
                 var tref=React.useRef();
                 var fgh=React.useRef();
                 function ab() {
-                    var a=document.getElementById('a2').value;
-                   setA([...ar,{value:a,status:false}]) 
+                    if (!(tref.current.value=="")) {
+                         setA([...ar,{value:tref.current.value,status:false}]) 
+                   tref.current.focus();
+                    }
                 }
                 function asd(c) {
                     ar[c].status=!ar[c].status
@@ -35,12 +37,14 @@
                 },[])
                 function acc(ev) {
                    if(ev.key=="Enter"){
-                   fgh.current.focus();
+                  ab();
+                  tref.current.focus();
+                  tref.current.value=""
                    }
                 } 
                return <div>
                     <input id="a2" type="text" ref={tref} onKeyUp={((ev)=>{acc(ev)})} />
-                    <button ref={fgh} onClick={(()=>{ab()})}  >add</button>
+                    <button ref={fgh} onClick={(()=>{ab()})} >add</button>
                     <div>
                         {
                             ar.map((s,i)=>{
