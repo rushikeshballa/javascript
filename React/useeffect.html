@@ -7,14 +7,9 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <style>
-        
-    </style>
 </head>
 <body style="background-image: url(https://t3.ftcdn.net/jpg/01/10/01/90/240_F_110019055_JBbr778hMxpwuwDaFszyQNck5PhBYHli.jpg) ;">
     <div id="a1"></div>
-
     <script type="text/babel">
            function Todolist() {
                 var [ar,setA]=React.useState([]);
@@ -29,7 +24,6 @@
                 function asd(c) {
                     ar[c].status=!ar[c].status
                     setA([...ar])
-                    
                 }
                 function abc(d) {
                     ar.splice(d,1)
