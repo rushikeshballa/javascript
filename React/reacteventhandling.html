@@ -141,8 +141,91 @@
 
 
 
-        
+        // var A=(()=>{
+        //    var [a,setA]=React.useState("");
+        //    function abc(e) {
+        //     a=e.target.value;
+        //     var b=a.toUpperCase();
+        //      setA(b)
+        //    }
+        //    return <div>
+        //      <input onKeyUp={abc} type="text"/>
+        //      <h1>{a}</h1>
+        //     </div>
+        // })
+        // ReactDOM.render(<A/>,document.getElementById('a1'));
 
+
+
+
+
+        // var A=(()=>{
+        //     var [a,setA]=React.useState('');
+        //     var b=React.useRef();
+        //     function abc(s){
+        //         setA(s.target.value)
+        //     }
+        //     function asd(e) {
+        //         setA("");
+        //         b.current.value=""
+        //     }
+        //     return <div>
+        //         <input ref={b} onKeyUp={abc} type="text"/>
+        //         <h1>{a}</h1>
+        //         <button onClick={asd}>reset</button>
+        //         </div>
+        // })
+        // ReactDOM.render(<A/>,document.getElementById('a1'));
+
+
+
+
+
+        // var A=(()=>{
+        //     var [b,setB]=React.useState();
+        //     var [c,setC]=React.useState();
+        //     var [a,setA]=React.useState("");
+        //     function abc() {
+        //        setA(b*c);
+        //     }
+        //     function asd() {
+        //         setA(b/c);
+        //     }
+        //     function as(ev) {
+        //         setB(ev.target.value)
+        //     }
+        //     function acs(ev) {
+        //         setC(ev.target.value)
+        //     }
+        //     return <div>
+        //         <input onKeyUp={((e)=>{as(e)})} type="text"/>
+        //         <br/>
+        //         <input onKeyUp={((e)=>{acs(e)})} type="text"/>
+        //         <br/>
+        //         <button onClick={abc}>mul</button>
+        //         <button onClick={asd}>div</button>
+        //         <h1>{a}</h1>
+        //         </div>
+        // })
+        // ReactDOM.render(<A/>,document.getElementById('a1'));
+
+
+        var A=(()=>{
+            var [a,seta]=React.useState([]);
+            var [b,setb]=React.useState();
+            function abc(e) {
+                setb(e.target.value)
+            }
+            function asd(e) {
+                seta([...a,b])
+                console.log(a);
+            }
+            return <div>
+                <input onKeyUp={((ev)=>{abc(ev)})} type="text"/>
+                <button onClick={asd}>push</button>
+                </div>
+        })
+        ReactDOM.render(<A/>,document.getElementById('a1'));
 
     </script>
 
