@@ -210,22 +210,26 @@
         // ReactDOM.render(<A/>,document.getElementById('a1'));
 
 
-        var A=(()=>{
-            var [a,seta]=React.useState([]);
-            var [b,setb]=React.useState();
-            function abc(e) {
-                setb(e.target.value)
-            }
-            function asd(e) {
-                seta([...a,b])
-                console.log(a);
-            }
-            return <div>
-                <input onKeyUp={((ev)=>{abc(ev)})} type="text"/>
-                <button onClick={asd}>push</button>
-                </div>
-        })
-        ReactDOM.render(<A/>,document.getElementById('a1'));
+        // var A=(()=>{
+        //     var [a,seta]=React.useState([]);
+        //     var [b,setb]=React.useState();
+        //     function abc(e) {
+        //         setb(e.target.value)
+        //     }
+        //     function asd(e) {
+        //         seta([...a,b])
+        //         console.log(a);
+        //     }
+        //     return <div>
+        //         <input onKeyUp={((ev)=>{abc(ev)})} type="text"/>
+        //         <button onClick={asd}>push</button>
+        //         </div>
+        // })
+        // ReactDOM.render(<A/>,document.getElementById('a1'));
+
+
+
+        
 
     </script>
 
