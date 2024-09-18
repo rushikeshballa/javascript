@@ -228,7 +228,25 @@
         // ReactDOM.render(<A/>,document.getElementById('a1'));
 
 
-        
+        var A=(()=>{
+            var [a,setA]=React.useState();
+            var b;
+            var c;
+            function ac(e) {
+                b=e.target.value;
+            }
+            function asd(e) {
+                c=-e.target.value;
+            }
+            return <div>
+                <input onChange={((ev)=>{ac(ev)})} type="text"/>
+                <br/>
+                <input onChange={((ed)=>{asd(ed)})} type="text"/>
+                <button>substract</button>
+                </div>
+        })
+        ReactDOM.render(<A/>,document.getElementById('a1'));
+
 
     </script>
 
