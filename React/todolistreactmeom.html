@@ -13,33 +13,35 @@
 
     <div id="a1"></div>
     <script type="text/babel">
+
         var A=(()=>{
-            var [a,setA]=React.useState(["asd",'asxc',"fcwsd",'gvsdj']);
+            var [a,setA]=React.useState([]);
             function abc() {
                 var b=document.getElementById('a2').value;
                 setA([...a,b]);
             }
-            var de =function(k) {
+            var de =React.useCallback(
+                function(k) {
                 a.splice(k,1);
                 setA([...a]);
             }
+            )
             return <div>
                 <input id="a2" type="text"/>
                 <button onClick={abc}>add</button>
                 {
                     a.map((d,i)=>{
-                       return <Todo c={d} e={i}  ></Todo>
+                        
+                       return <Todo c={d} e={i} f={de} ></Todo>
                     })
                 }
                 </div>
         })
-
-        var Todo= React.memo(
-            ((props)=>{ 
-                console.log(props.c);
-                
+         var Todo= React.memo(
+            ((props)=>{  
+                console.log("ren")
            return <ul>
-            <li>{props.c}<button>delete</button></li>
+            <li>{props.c}<button onClick={(()=>{props.f(props.e)})}>delete</button></li>
             </ul>
         })
         )
