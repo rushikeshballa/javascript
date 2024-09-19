@@ -13,8 +13,9 @@
 
     <div id="a1"></div>
     <script type="text/babel">
+
         var A=(()=>{
-            var [a,setA]=React.useState(["asd",'asxc',"fcwsd",'gvsdj']);
+            var [a,setA]=React.useState([ "gdfg","ddjh"]);
             function abc() {
                 var b=document.getElementById('a2').value;
                 setA([...a,b]);
@@ -28,32 +29,22 @@
                 <button onClick={abc}>add</button>
                 {
                     a.map((d,i)=>{
-                       return <Todo c={d} e={i}  ></Todo>
+                       return <Todo c={d} e={i} f={de} ></Todo>
                     })
                 }
                 </div>
         })
 
-        var Todo= React.memo(
-            ((props)=>{ 
-                console.log(props.c);
-                
+
+
+
+
+        
+        var Todo=((props)=>{ 
            return <ul>
-            <li>{props.c}<button>delete</button></li>
+            <li>{props.c}<button onClick={(()=>{props.f(props.e)})}>delete</button></li>
             </ul>
         })
-        )
-
-
-
-        // var Todo= React.memo(
-        //     ((props)=>{ 
-        //    return <ul>
-        //     <li>{props.c}<button onClick={(()=>{props.f(props.e)})}>delete</button></li>
-        //     </ul>
-        // })
-        // )
-
         ReactDOM.render(<A/>,document.getElementById('a1'));
     </script>
 
