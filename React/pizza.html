@@ -880,33 +880,47 @@
     }
 
 ])   
-        function abc() {
-            
+
+        var [b,setB]=React.useState([]);
+        function abc(f) {
+            b.push(f);
+            setB([...b])     
         }
 
-        return <div style={{display:"flex",flexWrap:"wrap"}}>
-           {
+        return <div style={{display:"flex"}}>
+         <div style={{display:"flex",flexWrap:"wrap"}}>  {
             a.map((b)=>{
-                return <Piz c={b}></Piz>
+                return <Piz c={b} g={abc}></Piz>
             })
-           }
-
+           }</div>
+           <Cart h={b}></Cart>
             </div>
         }
         function Piz(pro) {
-            console.log(pro.c);
-            
             return <div style={{padding:"10px"}} >
                 <img style={{height:"250px",width:"250px"}} src={pro.c.img} alt=""/>
                     <h3>{pro.c.name}</h3>
                     <h3>price{pro.c.price}</h3>
-                    <button onClick={(()=>{abc()})}><h3>add to cart</h3></button>
+                    <button onClick={(()=>{pro.g(pro.c)})}><h3>add to cart</h3></button>
                 </div>
         } 
         ReactDOM.render(<A/>,document.getElementById('a1'));
 
         function Cart(e) {
-            
+            var j=0;
+            return <div>
+                <h1>cart</h1>
+                {
+                    e.h.map((i)=>{
+                return <div>
+                    <h4>{i.name}</h4>
+                    <h4>{i.price}</h4>
+                    {j=j+i.price}
+                    </div>
+                })
+                }
+                <h1>total {j}</h1>
+                </div>
         }
 
 
