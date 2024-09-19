@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+
+    <div id="a1"></div>
+    <script type="text/babel">
+
+        var A=(()=>{
+            var [a,setA]=React.useState([]);
+            function abc() {
+                var b=document.getElementById('a2').value;
+                setA([...a,b]);
+            }
+            var de =function(k) {
+                a.splice(k,1);
+                setA([...a]);
+            }
+            return <div>
+                <input id="a2" type="text"/>
+                <button onClick={abc}>add</button>
+                {
+                    a.map((d,i)=>{
+                       return <Todo c={d} e={i} f={de} ></Todo>
+                    })
+                }
+                </div>
+        })
+        var Todo=((props)=>{ 
+           return <ul>
+            <li>{props.c}<button onClick={(()=>{props.f(props.e)})}>delete</button></li>
+            </ul>
+        })
+        ReactDOM.render(<A/>,document.getElementById('a1'));
+    </script>
+
+</body>
+</html>
