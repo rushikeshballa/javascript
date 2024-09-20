@@ -15,14 +15,16 @@
     <script type="text/babel">
 
         var A=(()=>{
-            var [a,setA]=React.useState(["adas","dsfsdf","fsdsvd",]);
+            var [a,setA]=React.useState([]);
             function abc() {
                 var b=document.getElementById('a2').value;
                 setA([...a,b]);
             }
             var de =React.useCallback( function(k) {
-                a.splice(k,1);
-                setA([...a]);
+                setA((xeb)=>{
+                   xeb.splice(k,1)
+                   return [...xeb]
+                })
             },[])
             return <div>
                 <input id="a2" type="text"/>
