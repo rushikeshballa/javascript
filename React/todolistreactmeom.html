@@ -15,17 +15,15 @@
     <script type="text/babel">
 
         var A=(()=>{
-            var [a,setA]=React.useState([]);
+            var [a,setA]=React.useState(["adas","dsfsdf","fsdsvd",]);
             function abc() {
                 var b=document.getElementById('a2').value;
                 setA([...a,b]);
             }
-            var de =React.useCallback(
-                function(k) {
+            var de =React.useCallback( function(k) {
                 a.splice(k,1);
                 setA([...a]);
-            }
-            )
+            },[])
             return <div>
                 <input id="a2" type="text"/>
                 <button onClick={abc}>add</button>
@@ -39,22 +37,13 @@
         })
          var Todo= React.memo(
             ((props)=>{  
-                console.log("ren")
+                console.log(props.c);
            return <ul>
             <li>{props.c}<button onClick={(()=>{props.f(props.e)})}>delete</button></li>
             </ul>
         })
         )
 
-
-
-        // var Todo= React.memo(
-        //     ((props)=>{ 
-        //    return <ul>
-        //     <li>{props.c}<button onClick={(()=>{props.f(props.e)})}>delete</button></li>
-        //     </ul>
-        // })
-        // )
 
         ReactDOM.render(<A/>,document.getElementById('a1'));
     </script>
