@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="a1"></div>
+
+        <script type="text/babel">
+            var A=(()=>{
+                var [a,setA]=React.useState([]);
+                var add=function () {
+                 var b=document.getElementById("a2").value;
+                 a.push({
+                    todo:b,
+                    state:false,
+                 })
+                 setA([...a]);
+                 console.log(a);
+                 
+                }
+                var del=React.useCallback(  function (de) {
+                      setA(((pre)=>{
+                        pre.splice(de,1);
+                        return [...pre];
+                      }))
+                    },[])
+
+                var stat=React.useCallback( function (st) {
+                 setA(((pr)=>{
+                    pr[st].state=!pr[st].state;
+                    return [...pr];
+                 }))
+                },[])
+
+                return <div>
+                    <input id="a2" type="text"/>
+                    <button onClick={add}>add</button>
+                    <div>
+                     {
+                        a.map((c,i)=>{
+                            return <Todo s={stat}  in={i} vl={c.todo} st={c.state} fu={del} ></Todo>
+                        })
+                     }
+                     </div>
+                       </div>
+
+            })
+
+           var Todo = React.memo(
+            function (va) {
+                return  <li>{va.vl} <button onClick={(()=>{va.s(va.in)})}>{va.st?"undo":"done"}</button> <button onClick={(()=>{va.fu(va.in)})}>delete</button> </li>
+            }
+           )
+            ReactDOM.render(<A/>,document.getElementById('a1'));
+
+        </script>
+    </body>
+</html>
