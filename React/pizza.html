@@ -882,21 +882,23 @@
 ])   
 
         var [b,setB]=React.useState([]);
-        function abc(f) {
+      var abc = React.useCallback( function (f) {
             b.push(f);
             setB([...b])     
-        }
+        },[]) 
 
         return <div style={{display:"flex"}}>
          <div style={{display:"flex",flexWrap:"wrap"}}>  {
-            a.map((b)=>{
-                return <Piz c={b} g={abc}></Piz>
+            a.map((d)=>{
+                return <Piz c={d} g={abc}></Piz>
             })
            }</div>
            <Cart h={b}></Cart>
             </div>
         }
-        function Piz(pro) {
+      var Piz = React.memo(
+        function (pro) {
+            console.log(pro.c.name);
             return <div style={{padding:"10px"}} >
                 <img style={{height:"250px",width:"250px"}} src={pro.c.img} alt=""/>
                     <h3>{pro.c.name}</h3>
@@ -904,10 +906,12 @@
                     <button onClick={(()=>{pro.g(pro.c)})}><h3>add to cart</h3></button>
                 </div>
         } 
-        ReactDOM.render(<A/>,document.getElementById('a1'));
+       
+      )
 
-        function Cart(e) {
+       var  Cart = React.memo(function (e) {
             var j=0;
+            console.log(e);
             return <div>
                 <h1>cart</h1>
                 {
@@ -921,9 +925,9 @@
                 }
                 <h1>total {j}</h1>
                 </div>
-        }
-
-
+        } )
+        
+          ReactDOM.render(<A/>,document.getElementById('a1'));
 
     </script>
 </body>
