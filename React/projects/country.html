@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <div id="a1"></div>
+    
+
+    <script type="text/babel">
+        
+
+        function A () {
+            var [co,setCO]=React.useState([]);
+
+           React.useEffect((()=>{
+            fetch("https://restcountries.com/v3/all").then(function (res) {
+            res.json().then((data)=>{
+              setCO(data)
+            })
+          })
+           }),[])
+          
+           function sho(s) {
+            
+            co.shot( function (a,b) {
+             
+            }
+
+            )
+
+           }
+
+           return <div>
+                <table border="1">
+                <thead>
+                    <tr>
+                    <th>name</th>   
+                    <th>flag</th> 
+                    <th>capital</th>
+                    <th>area</th>
+                    <th>population</th>
+                    <th>continents</th>
+                    </tr>
+                </thead>    
+                <tbody>
+                    {
+                        co.map(((a)=>{
+                            console.log(a);
+                            
+                            return <tr>
+                                 <td>{a.name.common}</td>
+                                 <td ><img style={{width:"90px",height:"50px"}} src={a.flags[1]} alt=""/></td>
+                                 <td>{a.capital}</td>
+                                 <td>{a.area}</td>
+                                 <td>{a.population}</td>
+                                 <td>{a.continents}</td>
+                                </tr>
+                        }))
+                    }
+                </tbody>
+                </table>
+            
+              </div>
+
+
+
+        }
+        ReactDOM.render(<A/>,document.getElementById('a1'));
+     
+    </script>
+</body>
+</html>
