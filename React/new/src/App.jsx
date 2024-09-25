@@ -6,7 +6,6 @@ function App() {
   return (
     <div>
       <Tem></Tem>
-      
     </div>
    
   );

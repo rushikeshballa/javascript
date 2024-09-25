@@ -3,10 +3,10 @@ import Tem from "./temp";
 import Pl from "./pla";
 function Te(a) {
 
-    return <div style={{border:"1px solid"}}>
+    return <div >
         {
         a.a.map((b)=>{
-        return <div>
+        return <div style={{border:"1px solid", padding:"10px", margin:"10px"}}>
             <h1>{b.teamname}</h1>
             <Pl p={b}></Pl>
         </div>
@@ -16,4 +16,6 @@ function Te(a) {
    
 
 }
+
+
 export default Te
