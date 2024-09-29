@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Mov from './components/movie';
 
 function App() {
   return (
-    <div className="App">
-     
+    <div >
+     <Mov></Mov>
     </div>
   );
 }
