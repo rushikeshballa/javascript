@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 function Head() {
@@ -7,20 +8,20 @@ function Head() {
        <div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <Link class="navbar-brand" to="/">Navbar</Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <Link class="nav-link active" aria-current="page" to="/home">Home</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/body">Features</a>
+          <Link class="nav-link" to="/body">Features</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/body2">Pricing</a>
+          <Link class="nav-link" to="/body2">Pricing</Link>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>

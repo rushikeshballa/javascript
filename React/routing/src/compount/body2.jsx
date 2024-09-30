@@ -1,8 +1,8 @@
 import React from "react";
-
+import Tem from "./temp";
 
 function Bo() {
-    return <h1>body2</h1>
+    return <Tem></Tem>
 }
 
 export default Bo;
