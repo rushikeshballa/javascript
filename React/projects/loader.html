@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div id="a1"></div>
+    <script type="text/babel">
+        var Ab = function (){
+            var [prod,setProd] = React.useState();
+            React.useEffect(()=>{
+                fetch("https://fakestoreapi.com/products")
+                .then((res)=>{return res.json()})
+                .then(data=>{setProd([...data])},[])
+            })
+            function delt(prod,i){
+                fetch(http://fakestoreapi.com/products/${i},{
+                    method:"DELETE"
+                }).then(function(res){console.log(res)})
+            }
+            return ( <div>
+                        <h1>Products</h1>
+                        {!prod&&(
+                            <div className="spinner-border"><span className="sr-only"></span></div>
+                        )}
+                        <div className="d-flex flex-wrap p-5">
+                        {prod?.map((prod)=>{
+                            return (
+                            <div className="card w-25 p-5" style={{width:'10rem'}}>
+                                <img src={prod.image} className="card-img-top h-90" alt="..."/>
+                                <div className='card-body'>
+                                    <p className="card-text">{prod.description.slice(0,150)}</p>
+                                    </div>
+                                    <button onClick={(i)=>{delt(prod,i)}}>Delete</button>
+                                    </div>)
+                                })}</div>
+                     </div> ) }
+        ReactDOM.render(<Ab/>,document.getElementById('a1'))
+    </script>
+</body>
+</html> -->
