@@ -16,6 +16,5 @@ function Country() {
         {/* <h1>{a.capital[0]}</h1> */}
        
      </div>
-    
 }
 export  default Country;

@@ -21,7 +21,7 @@ function Tem() {
            </div>
         </div>
         
-    )
+    ) 
 
 }
 export default Tem
