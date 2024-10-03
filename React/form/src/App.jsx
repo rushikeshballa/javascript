@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Form from './components/formhandling';
+import For from './components/formhandling';
 function App() {
   return (
     <div className="App">
-      <Form></Form>
+      <For></For>
     </div>
   );
 }

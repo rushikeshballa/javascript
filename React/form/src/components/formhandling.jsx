@@ -1,6 +1,7 @@
 import React from "react";
 import { useFormik } from "formik"
-function Form() {
+import * as Yup from "yup";
+function For() {
 
     var details =useFormik({
                         initialValues:{
@@ -8,6 +9,10 @@ function Form() {
                             lastname:"",
                             age:"",
                         }, 
+                        validationSchema:Yup.object({
+                            firstname: Yup.string().min(2,"minium").required("its requried"),
+                            lastname:Yup.string("only letters").min(3,"more").max(5,"less").required("its requeied")
+                        }),
                         onSubmit: (val)=> {
                             console.log(val);
                             console.log(details);
@@ -22,10 +27,14 @@ function Form() {
                             <div>
                                 <h1>form</h1>
                                 <form onSubmit={details.handleSubmit}>
-                                <input type="text" name="firstname" onChange={details.handleChange} />
+                                <input type="text" {...details.getFieldProps("firstname")} />
+                                <br />
+                                <span>{details.touched.firstname && details.errors.firstname}</span> 
+                               
                                 <br />
                                 <input type="text" name="lastname" onChange={details.handleChange}/>
                                 <br />
+                                <p>{details.errors.lastname}</p>
                                 <input type="number" name="age" onChange={details.handleChange} />
                                 <br />
                                 <button>sumit</button>
@@ -35,4 +44,4 @@ function Form() {
                         )
     
 }
-export default Form;
+export default For;
