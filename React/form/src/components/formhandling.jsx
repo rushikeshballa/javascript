@@ -10,7 +10,7 @@ function For() {
                             age:"",
                         }, 
                         validationSchema:Yup.object({
-                            firstname: Yup.string().min(2,"minium").required("its requried"),
+                            firstname:Yup.string().required("needed").min(3,"nead more"),
                             lastname:Yup.string("only letters").min(3,"more").max(5,"less").required("its requeied")
                         }),
                         onSubmit: (val)=> {
