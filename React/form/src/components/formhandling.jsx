@@ -15,8 +15,6 @@ function For() {
                         }),
                         onSubmit: (val)=> {
                             console.log(val);
-                            console.log(details);
-                            
                         }       
 
                             }
@@ -43,6 +41,6 @@ function For() {
                             </div>
                         )
     
-                        
+
 }
 export default For;
